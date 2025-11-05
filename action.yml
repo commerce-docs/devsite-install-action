@@ -1,5 +1,5 @@
-name: 'Setup Node and Install Dependencies'
-description: 'Setup Node.js environment and install dependencies'
+name: 'Setup Node.js and Install Dependencies'
+description: 'Setup Node.js environment and install dependencies for Adobe Commerce DevSite projects based on Gatsby'
 inputs:
   node-version-file:
     description: 'Path to the .nvmrc file'
@@ -12,7 +12,7 @@ runs:
   steps:
 
     - name: Setup Node
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v6
       with:
         node-version-file: ${{ inputs.node-version-file }}
         cache: 'yarn'
